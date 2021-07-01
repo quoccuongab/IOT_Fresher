@@ -17,6 +17,7 @@ function App() {
         className="button-show">
         {isShow ? <CaretLeftOutlined style={{ marginLeft: '0' }} /> : <CaretRightOutlined style={{ marginLeft: '0' }} />}
       </Button>
+      <Map />
 
     </div>
   );

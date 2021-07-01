@@ -3,7 +3,6 @@
     background-color: white;
     padding: 5px;
     height: 100%;
-    position: absolute;
     &-content {
         .search-box {
             box-shadow: 0px 0px 2px #00000052;
@@ -30,8 +29,7 @@
                 }
             }
         }
-        .button-show {
-        }
+
         .info {
             display: flex;
             flex-direction: column;
