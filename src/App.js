@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
+import Map from './component/Map';
+import { CaretLeftOutlined, CaretRightOutlined } from '@ant-design/icons';
+import { Button, Tooltip } from 'antd';
+import InfoBox from './component/infoBox';
 
 function App() {
+  const [isShow, setIsShow] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isShow && <InfoBox />}
+      <Button
+        type="primary"
+        onClick={() => setIsShow(!isShow)}
+        className="button-show">
+        {isShow ? <CaretLeftOutlined style={{ marginLeft: '0' }} /> : <CaretRightOutlined style={{ marginLeft: '0' }} />}
+      </Button>
+
     </div>
   );
 }

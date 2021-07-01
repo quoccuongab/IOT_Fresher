@@ -1,0 +1,14 @@
+@import '~antd/dist/antd.css';
+
+.App {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .button-show {
+        margin-left: 285px;
+        margin-top: 5px;
+        padding: 0;
+        text-align: center;
+    }
+}
