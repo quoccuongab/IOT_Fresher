@@ -7,23 +7,31 @@ import MouseTooltip from 'react-sticky-mouse-tooltip';
 
 
 function Map(props) {
-    const text = <span>prompt text</span>;
+    const [isShow, setIsShow] = useState(true);
 
-    const buttonWidth = 70;
-    const [isShown, setIsShown] = useState(false);
+
     const [isMouseTooltipVisible, setIsMouseTooltipVisible] = useState(false);
-    function changeBackground(e) {
+    function Trigger(e) {
         setIsMouseTooltipVisible(true)
     }
-
     const onMouseLeaves = (e) => {
         setIsMouseTooltipVisible(false)
 
     }
-
     return (
-        <div className="map" onMouseOver={changeBackground} onMouseLeave={onMouseLeaves}>
+        <div className='map'
+            onMouseOver={Trigger}
+            onMouseLeave={onMouseLeaves} >
+            {isShow && <InfoBox
 
+
+            />}
+            <Button
+                type="primary"
+                onClick={() => setIsShow(!isShow)}
+                className="button-show">
+                {isShow ? <CaretLeftOutlined style={{ marginLeft: '0' }} /> : <CaretRightOutlined style={{ marginLeft: '0' }} />}
+            </Button>
             <MouseTooltip
 
                 visible={isMouseTooltipVisible}

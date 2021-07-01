@@ -10,13 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      {isShow && <InfoBox />}
-      <Button
-        type="primary"
-        onClick={() => setIsShow(!isShow)}
-        className="button-show">
-        {isShow ? <CaretLeftOutlined style={{ marginLeft: '0' }} /> : <CaretRightOutlined style={{ marginLeft: '0' }} />}
-      </Button>
+
       <Map />
 
     </div>

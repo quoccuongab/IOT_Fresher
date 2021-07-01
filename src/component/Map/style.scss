@@ -1,12 +1,20 @@
 .map {
     display: flex;
     background-color: lavender;
-    width: 1000px;
+    width: 90%;
     height: 100vh;
     min-height: 100%;
+    z-index: 1;
+
     .test {
         height: 100px;
         width: 100px;
         background-color: blue;
+    }
+    .button-show {
+        margin-top: 5px;
+        margin-left: 5px;
+        padding: 0;
+        text-align: center;
     }
 }
